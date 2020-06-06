@@ -1,0 +1,91 @@
+model_inputs:
+  lstm:
+  - text_raw_indices
+  td_lstm: 
+  - text_left_with_aspect_indices
+  - text_right_with_aspect_indices
+  ian: 
+  - text_raw_indices
+  - aspect_indices
+  ram: 
+  - text_raw_indices
+  - aspect_indices
+  - text_left_indices
+  tnet_lf: 
+  - text_raw_indices
+  - aspect_indices
+  - aspect_in_text
+  aen_bert: 
+  - text_raw_bert_indices
+  - aspect_bert_indices
+  lcf_bert: 
+  - text_bert_indices
+  - bert_segments_ids
+  - text_raw_bert_indices
+  - aspect_bert_indices
+  mgan:
+  - text_raw_indices
+  - aspect_indices
+  - text_left_indices
+
+datasets:
+  twitter:
+    train: ./datasets/acl-14-short-data/train.raw
+    test: ./datasets/acl-14-short-data/test.raw
+  restaurant:
+    train: ./datasets/semeval14/Restaurants_Train.xml.seg
+    test: ./datasets/semeval14/Restaurants_Test_Gold.xml.seg
+  laptop:
+    train: ./datasets/semeval14/Laptops_Train.xml.seg
+    test: ./datasets/semeval14/Laptops_Test_Gold.xml.seg
+  laptop_2020:
+    train: ./datasets/semeval14/Laptops_Train.xml.seg
+    test: ./datasets/time_data/2020.litesent
+  rest_2020:
+    train: ./datasets/semeval14/Restaurants_Train.xml.seg
+    test: ./datasets/time_data/2020.litesent
+  twitter_2020:
+    train: ./datasets/acl-14-short-data/train.raw
+    test: ./datasets/time_data/2020.litesent
+  laptop_gold:
+    train: ./datasets/semeval14/Laptops_Train.xml.seg
+    test: ./datasets/sampled_59_docs.litesent
+  rest_gold:
+    train: ./datasets/semeval14/Restaurants_Train.xml.seg
+    test: ./datasets/sampled_59_docs.litesent
+  twitter_gold:
+    train: ./datasets/acl-14-short-data/train.raw
+    test: ./datasets/sampled_59_docs.litesent
+  laptop_coref_gold:
+    train: ./datasets/semeval14/Laptops_Train.xml.seg
+    test: ./datasets/coref_59_docs.litesent
+  rest_coref_gold:
+    train: ./datasets/semeval14/Restaurants_Train.xml.seg
+    test: ./datasets/coref_59_docs.litesent
+  twitter_coref_gold:
+    train: ./datasets/acl-14-short-data/train.raw
+    test: ./datasets/coref_59_docs.litesent
+  semeval_gold:
+    train: ./datasets/semeval_all.litesent
+    test: ./datasets/sampled_59_docs.litesent
+  semeval_coref_gold:
+    train: ./datasets/semeval_all.litesent
+    test: ./datasets/coref_59_docs.litesent
+  semeval_segment_coref_gold:
+    train: ./datasets/semeval_all.litesent
+    test: ./datasets/segment_coref_59_docs.litesent
+  train_gold_test_semeval:
+    train: ./datasets/sampled_59_docs.litesent
+    test: ./datasets/semeval_all.litesent
+  train_coref_test_semeval:
+    train: ./datasets/coref_59_docs.litesent
+    test: ./datasets/semeval_all.litesent
+  TESTCOREF_twitter:
+    train: ./datasets/acl-14-short-data/train.raw
+    test: ./datasets/coref_existing/augmented_twitter_test.litesent
+  TESTCOREF_rest:
+    train: ./datasets/semeval14/Restaurants_Train.xml.seg
+    test: ./datasets/coref_existing/augmented_restaurants_test_gold.litesent
+  TESTCOREF_laptop:
+    train: ./datasets/semeval14/Laptops_Train.xml.seg
+    test: ./datasets/coref_existing/augmented_laptops_test_gold.litesent
