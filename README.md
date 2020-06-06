@@ -20,8 +20,7 @@ To install requirements, run `pip install -r requirements.txt`.
 python train.py --model_name lcf_bert --dataset restaurant
 ```
 * All implemented models are listed in [zoo.py](./zoo.py).
-* See [train.py](./train.py) for more training arguments.
-* Refer to [train_k_fold_cross_val.py](./train_k_fold_cross_val.py) for k-fold cross validation support.
+* See [argparser.py](./helpers/argparser.py) for training arguments.
 
 ## Reviews / Surveys
 
