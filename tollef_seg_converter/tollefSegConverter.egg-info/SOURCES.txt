@@ -1,0 +1,5 @@
+setup.py
+tollefSegConverter.egg-info/PKG-INFO
+tollefSegConverter.egg-info/SOURCES.txt
+tollefSegConverter.egg-info/dependency_links.txt
+tollefSegConverter.egg-info/top_level.txt

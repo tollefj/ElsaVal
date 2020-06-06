@@ -1,0 +1,62 @@
+query dynamicQuery($settings: EventSettingsInput!, $language: Language) {
+  events(settings: $settings) {
+    edges {
+      node {
+        title
+        annotations {
+          __typename
+          edges {
+            node {
+              __typename
+              phrase
+              offset { offset }
+              annotated {
+                ... on Topic {
+                  isTopLevel
+                  name
+                  description
+                }
+                ... on Location {
+                  name
+                  countries { edges { node { name }}}
+                  kind
+                }
+                ... on Person {
+                  fullName
+                  name
+                  gender
+                  birthYear
+                  aliases (language: $language) {
+                    value
+                    color
+                    disabled
+                  }
+                }
+                ... on Company {
+                  owners {
+                    edges {
+                      sharePercentage
+                      node {
+                        __typename
+                        ... on Person {
+                          fullName
+                          gender
+                          birthYear
+                          aliases (language: $language) {
+                            value
+                            color
+                            disabled
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

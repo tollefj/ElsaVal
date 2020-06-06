@@ -1,0 +1,5 @@
+setup.py
+tollefCleaner.egg-info/PKG-INFO
+tollefCleaner.egg-info/SOURCES.txt
+tollefCleaner.egg-info/dependency_links.txt
+tollefCleaner.egg-info/top_level.txt

@@ -1,0 +1,62 @@
+query dynamicQuery($settings: EventSettingsInput!, $language: Language) {
+  events(settings: $settings) {
+    edges {
+      node {
+        body
+        entities {
+          edges {
+            relevance {
+              score
+            }
+            annotations {
+              phrase
+              extractors
+              offset {
+                offset
+                __typename
+              }
+              entity {
+                ... on Entity {
+                  name(language: $language)
+                  description(language: $language)
+                  aliases(language: $language) {
+                    value
+                    color
+                  }
+                  relations(language: $language) {
+                    edges {
+                      relationship {
+                        name
+                      }
+                      node {
+                        ...on Entity {
+                          name
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+  "settings": {
+    "after": null,
+    "first": 10,
+    "events": {
+      "time": {
+        "from": "2020-01-01T12:00:00.000Z",
+        "to": "2020-01-01T13:00:00.000Z"
+      },
+      "languages": "ENGLISH",
+        "topics": ["Q43015", "Q8134"]
+    }
+  },
+  "language": "ENGLISH"
+}

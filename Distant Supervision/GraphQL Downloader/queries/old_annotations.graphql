@@ -1,0 +1,47 @@
+query dynamicQuery($settings: EventSettingsInput!, $language: Language) {
+  events(settings: $settings) {
+    edges {
+      node {
+        id
+        body
+        entities {
+          edges {
+            annotations {
+              extractors
+              offset {
+                offset
+                __typename
+              }
+              entity {
+                ... on Entity {
+                  id
+                  name(language: $language)
+                  description(language: $language)
+                  aliases(language: $language) {
+                    value
+                    color
+                    disabled
+                  }
+                  relations (language: $language) {
+                    __typename
+                    edges {
+                      relationship {
+                        name
+                        __typename
+                      }
+                      node {
+                        ... on Entity {
+                          name
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

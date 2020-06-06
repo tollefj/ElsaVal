@@ -1,0 +1,24 @@
+if relations and 
+...
+subclass of...
+person
+object
+service
+business service
+
+instance_of...
+business
+enterprice
+media
+country
+federal state
+sovereign state
+
+
+
+
+
+subclass_of:
+system, communication, ministry, industry,
+military operations, campaign, urban area, city/town, community,
+media, musical, adult, person, program, television film, producer, news media, enterprise, musician, author, human, software, science, hobby, religion, product, engineer, television, 
