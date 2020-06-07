@@ -20,7 +20,7 @@ This requires access to the Strise knowledge graph, by inserting an `AUTH_KEY` w
   - Step 4: (optional) augmentation part, later moved to another system, incorporating a better segmentation algorithm, found in `Segmentation` folder.
   
 ___
-# Segmentation Algorithm
+# Segmentation Algorithm with Coreference Resolution Augmentation
 The algorithm is initially used in `main.py`, where the SpanBERT model calculates clusters and tokens.
 The files `entitycentric.py` and `Segmenter.py` comprises the final algorithm.
 
