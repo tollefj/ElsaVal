@@ -1,14 +1,10 @@
-from models import LSTM, TD_LSTM, IAN, RAM, TNet_LF, LCF_BERT, AEN_BERT, MGAN
+from models import LSTM, TD_LSTM, Cabasc, LCF_BERT
 import torch
 
 models = {
     'lstm': LSTM,
     'td_lstm': TD_LSTM,
-    'ian': IAN,
-    'ram': RAM,
-    'mgan': MGAN,
-    'tnet_lf': TNet_LF,
-    'aen_bert': AEN_BERT,
+    'cabasc': Cabasc,
     'lcf_bert': LCF_BERT
     # default hyper-parameters for LCF-BERT model is as follws:
     # lr: 2e-5
