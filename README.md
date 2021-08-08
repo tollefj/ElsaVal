@@ -1,7 +1,7 @@
 # ElsaVal - A Framework for Entity-level Sentiment Analysis
 Augmenting Entity-Level Sentiment Analysis with Coreference Resolution
 ___
-This framework consists largely of two parts:
+This framework consists largely of three parts:
 1. Dataset generation through distant supervision with knowledge graphs
 2. Model framework for classification
 3. Segmentation algorithm to be used for augmentation
